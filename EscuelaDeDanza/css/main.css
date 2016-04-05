@@ -1,1 +1,86 @@
 /* Inserta tu codigo aqui */
+
+/*css de menú está en el archivo common.css*/
+
+/*comienzo banner*/
+
+.banner{
+	background-image: url(img/dance_1.jpg);
+	border: 1px solid transparent;
+}
+
+.caja-banner{
+ margin-left: 100px;
+}
+
+.studio{
+	font-size: 100px;
+	margin-bottom: 10px;
+}
+
+.parrafo-banner{
+	width: 250px;
+}
+
+.boton-studio{
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background-color: #111b36;
+	width: 140px;
+	height: 40px;
+	padding-top: 8px;
+	padding-left: 30px;
+	opacity: 0.8;
+}
+
+/*fin sección banner*/
+
+/*comienzo sección "clases"*/
+.caja-clases{
+	background-image: url(textura_2.jpg);
+	margin-top: 50px;
+}
+
+.texto-clases{
+	width: 900px;
+	margin-left: 200px;
+}
+
+.separador{
+	width: 150px;
+	height: 150px;
+	margin-left: 550px;
+}
+
+.boton-clases{
+	width: 300px;
+	height: 60px;
+	background-color: #192951;
+	border:1px solid transparent;
+	border-radius: 5px;
+	padding-left: 90px;
+	padding-top: 20px;
+	margin-left: 480px;
+}
+
+/*fin sección "clases"*/
+
+/*comienzo sección "instructores"*/
+.instructores{
+	width: 100%;
+	border: 1px solid #192951;
+}
+
+.foto-instructor{
+	max-width: 100%;
+}
+
+.boton-instructores{
+	background-color: #192951;
+	border:1px solid transparent;
+	border-radius: 2px;
+	padding-left: 80px;
+	padding-top: 20px;
+	width: 300px;
+	height: 60px;
+}
