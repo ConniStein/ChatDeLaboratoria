@@ -1,0 +1,27 @@
+/*.asientos{
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	line-height: 100px;
+	margin: 5px;
+}*/
+
+.ocupado{
+	background-color: #A6030A;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	line-height: 100px;
+	margin: 5px;
+	display: inline-block;
+}
+
+.desocupado{
+	background-color: #36823A;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	line-height: 100px;
+	margin: 5px;
+	display: inline-block;
+}
