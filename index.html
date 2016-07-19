@@ -14,14 +14,13 @@
 	  	<link href="css/queries.css" rel="stylesheet">
 	</head>
 	<body>
-	  	<div class="w-app">
+	  	<div id="app" class="w-app">
 	  		<div class="container">
 	  			<aside class="col-md-4 w-contacts">
 	  				<header class="w-profile clearfix">
 	  					<div class="avatar col-xs-7">
 	  						<img src="image/gian.jpg" alt="">
 	  					</div>
-
 	  					<div class="w-chat-controls col-xs-4">
 	  						<div class="icon-dots-three-vertical"></div>
 	  						<div class="icon-message"></div>
@@ -30,6 +29,7 @@
 	  				<div class="w-search icon-search">
 	  					<input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts">
 	  				</div>
+	  				<!-- Avatar -->
 	  				<ul class="w-recent-chats">
 	  					<li>
 		  					<div class="avatar">
@@ -121,6 +121,7 @@
 	  					</li>	 					
 	  				</ul>
 	  			</aside>
+	  			<!-- Contactos, parte de arriba -->
 	  			<section class="col-md-8 w-contacts w-messages">
 	  				<header class="w-chat-messages clearfix">
 	  					<div class="avatar col-xs-9 w-chat-profile">
@@ -137,7 +138,7 @@
 	  					</div>
 	  					<div class="w-chat-controls col-xs-2">
 	  						<div class="icon-attachment"></div>
-
+								<!-- Chat -->
 	  						<div class="icon-dots-three-vertical"></div>
 	  					</div>
 	  				</header>
@@ -241,13 +242,15 @@
 	  						</div>  							  						
 	  					</div>
 	  				</section>
-
+	  				<!-- El footer es la respuesta -->
 	  				<footer class="pane-footer w-write-message-footer">
 	  					<ul class="w-write-message-list clearfix">
 	  						<li class="col-xs-1 w-write-message-item icon-insert_emoticon w-write-message-icon"></li>
 	  						<li class="col-xs-10 w-write-message-item w-write-message-input">
+	  							<!-- Aqui se escribe -->
 	  							<input type="text" name="w-message-input" class="w-write-message-field" placeholder="Escribe tu mensaje aquí" id="mensajes">
 	  						</li>
+	  						<!-- Aqui ya no -->
 	  						<li class="col-xs-1 w-write-message-item icon-mic w-write-message-icon"></li>
 	  					</ul>
 	  				</footer>
