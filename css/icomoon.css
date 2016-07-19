@@ -47,3 +47,76 @@
 	content: "\e906"
 }
 
+/* emojis*/
+.icon-happy:before {
+    content: "\e900";
+}
+
+.icon-smile:before {
+    content: "\e901";
+}
+
+.icon-tongue:before {
+    content: "\e902";
+}
+
+.icon-sad:before {
+    content: "\e903";
+}
+
+.icon-wink:before {
+    content: "\e904";
+}
+
+.icon-grin:before {
+    content: "\e905";
+}
+
+.icon-cool:before {
+    content: "\e906";
+}
+
+.icon-angry:before {
+    content: "\e907";
+}
+
+.icon-evil:before {
+    content: "\e908";
+}
+
+.icon-shocked:before {
+    content: "\e909";
+}
+
+.icon-baffled:before {
+    content: "\e90a";
+}
+
+.icon-confused:before {
+    content: "\e90b";
+}
+
+.icon-neutral:before {
+    content: "\e90c";
+}
+
+.icon-hipster:before {
+    content: "\e90d";
+}
+
+.icon-wondering:before {
+    content: "\e90e";
+}
+
+.icon-sleepy:before {
+    content: "\e90f";
+}
+
+.icon-frustrated:before {
+    content: "\e910";
+}
+
+.icon-crying:before {
+    content: "\e911";
+}
+
