@@ -1,43 +1,99 @@
-// Parte 0 
-$(document).ready(function(){
-	var data, hora;
+function templateMensaje(mensaje, tipo) {
+  var clase = 'col-md-12';
+  if (tipo === 'bubble') {
+    clase = 'col-md-5';
+  }
+  return '<div class="col-md-12">' +
+    '<div class="' + clase + '">' +
+      '<div class="'+ tipo + '">' +
+        '<h5>' + mensaje.texto + '</h5>' +
+        '<h6>' + mensaje.hora + '</h6>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+};
 
-	$("#mensajes").keypress(function(){
-		data = new Date();
-		hora = data.getHours();
-		var minutos = data.getMinutes();
-		var hourMyMessage = hora+":"+minutos;
-		var yourMessage = $("#mensajes").val();
-		var chatMessage = $("#chat"); // DIV PADRE
-		var myMessageChat = $("<div class='w-message'> <div class='w-message-out'> <div class='w-message-text'> <p>"+yourMessage+"</p> </div> <div class='time'>"+hourMyMessage+"</div>"+"</div></div>");
-		
-		if(event.which===13&&yourMessage!== ""){
-			$("#mensajes").val("");
-			chatMessage.append(myMessageChat);	
-		}
-	});
+function mostrar(item) {
+  var id = $(item).parent().attr('id');
+  $('.convo-section').html('');
+  $.each(data, function(index, contacto) {
+    if (index == id) {
+      $.each(contacto.mensajes, function(index, mensaje) {
+        var mensajeItem = templateMensaje(mensaje, 'bubble');
+        $('.convo-section').append(mensajeItem);
+      });
+      $('.conversation-contact').html('<div class="profile-pic">'+
+        '<img src="' + contacto.avatar + '"></div>' + 
+        '<h4>' + contacto.nombre + '</h4>');
+    }
+  });
+}
 
-// Parte 1 
-	$(".panel-list-message-contact").click(function(){
-		$(".w-messages").empty();
-	});
+function templateContacto(contacto) {
+  return '<li class="contact" id="' + contacto.id + '">' +
+    '<a href="#" onclick="mostrar(this);">' +
+      '<div class="profile-pic">' +
+        '<img src="' + contacto.avatar + '">' +
+      '</div>' +
+      '<h4>' + contacto.nombre +
+      '<span class="profile-hora">' + contacto.hora + '</span></h4>' +
+      '<h5>' + contacto.mensaje + '</h5>' +
+    '</a>' +
+  '</li>';
+}
 
-	$(".w-search-contacts").keypress(function(){
-		if(event.which===13){
-			var nameContact = $(".avatar");
-			var texto = $(".w-search-contacts").val();
-			texto = texto.toLowerCase();
-			nameContact.show();
-			for(var i=0; i< nameContact.size(); i++){
-				var contenido = nameContact.eq(i).text();
-				contenido = contenido.toLowerCase();
-				var index = contenido.indexOf(texto);
-				if(index == -1){
-					nameContact.eq(i).hide();
-				}		
-			}
-		}
-	});
+function llenarListaContactos() {
+  var listaContactos = '';
+  $.each(data, function(index, contacto) {
+    contacto.id = index;
+    listaContactos += templateContacto(contacto);
+  });
+  $('.contacts').html(listaContactos);
+}
+
+function obtenerHora() {
+  var date = new Date();
+  var hora = date.getHours();
+  var minutos = date.getMinutes();
+
+  if (minutos < 10) {
+    minutos = '0' + minutos;
+  }
+
+  return hora + ':' + minutos;
+}
+
+$(document).on('ready', function() {
+
+  llenarListaContactos();
+
+  $('#mensajeNuevo').on('keypress', function(event) {
+    if (event.keyCode === 13) {
+      var textoMensaje = $('#mensajeNuevo').val();
+
+      if (textoMensaje != '') {
+        var mensaje = templateMensaje({
+          texto : textoMensaje,
+          hora : obtenerHora()
+        }, 'mybubble');
+        $('.convo-section').append(mensaje);
+        $('#mensajeNuevo').val('');
+      }
+    }
+  });
+
+  $('#buscarContacto').on('keyup', function(event) {
+    var valorBuscado = $('#buscarContacto').val();
+
+    $.each(data, function(index, contacto) {
+      if ((contacto.nombre).search(valorBuscado) !== -1) {
+        var contactoItem = templateContacto(contacto);
+        $('.contacts').html(contactoItem);
+      }
+    });
+
+    if(event.keyCode === 8 && $(this).val() === '') {
+      llenarListaContactos();
+    }
+  });
 });
-
-
