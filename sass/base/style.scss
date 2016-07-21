@@ -1,0 +1,208 @@
+body {
+  background-color: $gris-claro;
+  font-family: $tipografia;
+}
+header {
+  padding: 3%;
+  height: 130px;
+  background-color: $turqueza;
+}
+section {}
+.profile-pic img {
+  width: $whidth-min;
+  height: $height-min;
+  border-radius: 50px;
+}
+.profile-pic {
+
+}
+.profile-hora {
+  float: right;
+  font-size: 12px;
+  margin-right: 5%;
+  color: $green-1;
+}
+.owner,
+.conversation {
+  background-color:$white;
+}
+.col-md-4 {
+  margin: 0;
+  padding: 0;
+.col-md-8 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.owner {
+  padding: 11.5px 20px;
+}
+span {
+  color: $gris-medio;
+  font-size: 21px;
+}
+.icon-message {
+  float: right;
+  margin-right: 15%;
+  margin-top: -10%;
+}
+.owner-dots {
+  float: right;
+  margin-top: -10%;
+}
+.conversation {
+  padding: 5px 10px 0 0;
+  height: 63px;
+}
+.conversation-contact {
+  margin-top: 10px;
+}
+.conversation-contact h4 {
+  margin-bottom: 0;
+}
+.conversation h4 {
+  margin-left: 7%;
+  margin-top: -5%;
+  font-size: 18px;
+}
+.conversation h5 {
+  margin-left: 7%;
+  margin-top: -1%;
+  font-size: 13px;
+  margin-bottom: 0.5%;
+}
+.icon-attachment {
+  float: right;
+  margin-top: -10px;
+}
+.convo-dots {
+  float: right;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+.chat-nuevo {
+  position: relative;
+  padding: 4%;
+  border-bottom: 2px solid $white-smoke;
+}
+.chat-nuevo span {
+  position: absolute;
+  top: 39%;
+  left: 8%;
+  font-size: 16px;
+}
+.chat-nuevo,
+.contacts {
+  background-color: $white;
+}
+.chat-nuevo input {
+  padding: 10px 20px 10px 35px;
+  border-radius: 5px;
+  border-style: none;
+  width: 100%;
+  border: 2px solid $white-dirty;
+}
+.contacts {
+  border-bottom: 2px solid $white-dirty;
+  min-height: 500px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contacts h4 {
+  font-size: 15px;
+  margin-left: 13%;
+  margin-top: -10%;
+  color: $black;
+}
+.contacts h5 {
+  font-size: 12px;
+  color: $gris-medio;
+  margin-left: 13%;
+  margin-top: -1%;
+  margin-bottom: 1%;
+}
+.contacts li {
+  display: block;
+  padding: 10px;
+  .contacts li a {
+    display: block;
+    padding: 10px;
+    .contacts li a:hover {
+      background:$white-smoke ;
+      text-decoration: none;
+    }
+  }
+}
+.mensajes-section {
+  position: relative;
+}
+.convo-section {
+  padding: 5px 10px 60px 0;
+  background-color: #EDEAE5;
+  background-image: url("../image/chat-panel-bg.png");
+  height: $height-medio;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.bubble {
+  border-radius: 6px;
+  margin-bottom: 5px;
+  background-color: $white;
+  padding: 1px 10px;
+}
+.bubble h5 {
+  margin-bottom: -2.5%;
+}
+.bubble h5 span {
+  font-size: 14px;
+}
+.bubble h6 {
+  text-align: right;
+}
+.mybubble {
+  text-align: right;
+  background-color: $verde-agua;
+  width: auto;
+  border-radius: 6px;
+  padding: 0.1% 1% 0%;
+  margin-bottom: 5px;
+  float: right;
+  max-width: 500px;
+}
+.mybubble h5 {
+  width: auto;
+  word-wrap: break-word;
+}
+.typing-section {
+  padding: 0.7%;
+  border: 1px solid $gris-medio;
+  width: 100%;
+  background-color: $gris-medio;
+  bottom: 0;
+}
+.typing-section span {
+  color: $gris-medio;
+  font-size: 23px;
+  margin: 1%;
+}
+.typing-section input {
+  width: 88%;
+  padding: 1%;
+  border-radius: 4px;
+  border-style: none;
+}
+.celeste {
+  color: $celeste;
+}
+.morado {
+  color: $purple;
+}
+.verde {
+  color: $green-1;
+}
+.amarillo {
+  color: $yellow-1;
+}
